@@ -5,13 +5,13 @@ import ExpenseDetail from "./ExpenseDetail";
 export default function ExpenseList() {
   const { state } = useBudget();
 
-  const isEmpty = useMemo(() => state.expenses.length === 0, [state.expenses]);
-
   const filterExpenses = state.currentCategory
     ? state.expenses.filter(
         (expense) => expense.category === state.currentCategory,
       )
     : state.expenses;
+
+  const isEmpty = useMemo(() => filterExpenses.length === 0, [filterExpenses]);
 
   return (
     <div className="mt-10 bg-white shadow-lg rounded-lg p-10">
