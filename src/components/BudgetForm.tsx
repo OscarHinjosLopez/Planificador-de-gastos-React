@@ -17,7 +17,7 @@ export default function BudgetForm() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    dispatch({ type: "ADD-BUDGET", payload: { budget: +budget } });
+    dispatch({ type: "ADD_BUDGET", payload: { budget: +budget } });
   };
 
   return (

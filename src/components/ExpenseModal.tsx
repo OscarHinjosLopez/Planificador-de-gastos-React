@@ -7,6 +7,9 @@ import ExpenseForm from "./ExpenseForm";
 export default function ExpenseModal() {
   const { state, dispatch } = useBudget();
 
+  
+  
+
   return (
     <>
       <div className="fixed right-5 bottom-5 flex items-center justify-center">
